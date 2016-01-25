@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <title>Neighbourhood Map</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.sidr.light.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>PORTLAND</h1>
+
+    <div class="btn-group col-sm-9 " data-toggle="buttons" data-bind="radio: category">
+       <button type="button" class="btn btn-warning search" id="simple-menu" href="#sidr"><i class="fa fa-search"></i></button>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" value="food" /><i class="fa fa-cutlery"></i>
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" value="coffee" /><i class="fa fa-coffee"></i>
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" value="shops" /><i class="fa fa-shopping-cart"></i>
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="options" value="sights" /><i class="fa fa-binoculars"></i>
+      </label>
+    </div>
+
+    <div class="col-sm-9">
+    <div class="map-div" id="map"></div>
+    </div>
+
+    <div id="sidr">
+    <input type="text" placeholder="Search..." data-bind="value: query">
+      <ul data-bind="foreach: filteredList">
+        <li class="list-elmnt" data-bind="text: name,  click: $parent.isSelected"></li>
+      </ul>
+    </div>
+
+  <div>
+
+  <script src="plugins/jquery-1.11.2.min.js"></script>
+  <script src="plugins/jquery.sidr.js"></script>
+  <script src="plugins/knockout-3.3.0.js"></script>
+  <script src="plugins/knockstrap.js"></script>
+  <script src="plugins/bootstrap.js"></script>
+  <script src="js/script.js"></script>
+  <script> function googlesuccess() {app();}</script>
+  <script> function googleError() {alert('ERROR: Could not connect to Google Maps API');}</script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDquMsffAwPDnQSrEgWoRUalEALtEACEzc&callback=googlesuccess" onerror="googleError()" async defer>
+  </script>
+</body>
+</html>
