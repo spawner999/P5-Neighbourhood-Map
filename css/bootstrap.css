@@ -21,9 +21,6 @@ html {
 }
 body {
   margin: 0;
-  background-color: #f8f8f8;
-  background-image: url("http://www.transparenttextures.com/patterns/brick-wall-dark.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 article,
 aside,
@@ -73,9 +70,9 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 6em;
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke: 2px #2e6da4;
+  font-size: 7em;
+  -webkit-text-fill-color: #f8f8f8;
+
 }
 mark {
   background: #ff0;
@@ -292,8 +289,10 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #337ab7;
-  background-color: #ffffff;
+  color: #383838;
+  background-color: #dfdfdf;
+  background-image: url("http://www.transparenttextures.com/patterns/dark-geometric.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 input,
 button,

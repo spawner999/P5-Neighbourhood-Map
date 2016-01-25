@@ -6,13 +6,14 @@ function app(){
   var map;
 
   //location class, stores info about a place
-  var Location = function(name, lat, lng, rating, img){
+  var Location = function(name, lat, lng, rating, img, category){
     this.name = name;
     this.lat = lat;
     this.lng = lng;
     this.rating = rating;
     this.img = 'https://irs3.4sqi.net/img/general/150x100' + img;
     this.marker;
+    this.category = category;
   };
 
   //initMap function, instantiates the map and appends it to the HTML document
@@ -58,7 +59,7 @@ function app(){
       self.showMarkers();
     });
     //this observable stores the category value, selectable by clicking a button, set on automatic topPicks on load
-    self.category = ko.observable('');
+    self.category = ko.observable('food');
     //info window, content is added later on
     self.infowindow = new google.maps.InfoWindow({
       content: ''
@@ -82,7 +83,9 @@ function app(){
           currentItem.venue.location.lat,
           currentItem.venue.location.lng,
           currentItem.venue.rating,
-          currentItem.venue.photos.groups[0].items[0].suffix);
+          currentItem.venue.photos.groups[0].items[0].suffix,
+          category);
+          console.log(currentLoc);
           //add a marker and eventListener to the current Location object
           self.createMarker(currentLoc);
           //add the created object the the list
@@ -113,7 +116,8 @@ function app(){
         position: {lat: location.lat, lng: location.lng},
         map: map,
         title: location.name,
-        visible: true
+        visible: true,
+        icon: 'img/' + location.category +'-icon.png'
       });
       //event Listener
       location.marker.addListener('click', function(){self.isSelected(location);});

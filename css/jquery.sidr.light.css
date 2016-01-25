@@ -8,9 +8,9 @@
   overflow-x: hidden;
   overflow-y: auto;
   font-family: "Montserrat", sans-serif;
-  font-size: 17px;
+  font-size: 15px;
   background: #f8f8f8;
-  color: #337ab7;
+  color: black;
   box-shadow: 0 0 5px 5px #ebebeb inset;
 }
 .sidr .sidr-inner {
