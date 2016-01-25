@@ -58,7 +58,7 @@ function app(){
       self.showMarkers();
     });
     //this observable stores the category value, selectable by clicking a button, set on automatic topPicks on load
-    self.category = ko.observable('abc');
+    self.category = ko.observable('');
     //info window, content is added later on
     self.infowindow = new google.maps.InfoWindow({
       content: ''
