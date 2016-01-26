@@ -13,26 +13,27 @@
 
 <body>
   <div class="container">
-    <img src="img/logo.png"></img>
+    <img src="img/logo.png">
 
-    <div class="btn-group col-sm-9 " data-toggle="buttons" data-bind="radio: category">
-       <button type="button" class="btn btn-warning search-btn" id="simple-menu" href="#sidr"><i class="fa fa-search"></i></button>
-      <label class="btn btn-primary active">
-        <input type="radio" name="options" value="food" checked/><span class="description">Food </span><i class="fa fa-cutlery"></i>
-      </label>
-      <label class="btn btn-info">
-        <input type="radio" name="options" value="coffee"/><span class="description">Coffee </span><i class="fa fa-coffee"></i>
-      </label>
-      <label class="btn btn-danger">
-        <input type="radio" name="options" value="shops"/><span class="description">Shops </span><i class="fa fa-shopping-cart"></i>
-      </label>
-      <label class="btn btn-success">
-        <input type="radio" name="options" value="sights"/><span class="description">Sights </span><i class="fa fa-binoculars"></i>
-      </label>
-    </div>
+
 
     <div class="col-sm-9">
-    <div class="map-div white-border" id="map"></div>
+      <div class="btn-group" data-toggle="buttons" data-bind="radio: category">
+        <button type="button" class="btn btn-warning search-btn" id="simple-menu" href="#sidr"><i class="fa fa-search"></i></button>
+          <label class="btn btn-primary active">
+          <input type="radio" name="options" value="food" checked/><span class="description">Food </span><i class="fa fa-cutlery"></i>
+          </label>
+          <label class="btn btn-info">
+          <input type="radio" name="options" value="coffee"/><span class="description">Coffee </span><i class="fa fa-coffee"></i>
+          </label>
+          <label class="btn btn-danger">
+          <input type="radio" name="options" value="shops"/><span class="description">Shops </span><i class="fa fa-shopping-cart"></i>
+          </label>
+          <label class="btn btn-success">
+          <input type="radio" name="options" value="sights"/><span class="description">Sights </span><i class="fa fa-binoculars"></i>
+          </label>
+      </div>
+      <div class="map-div white-border" id="map"></div>
     </div>
 
     <div id="sidr">

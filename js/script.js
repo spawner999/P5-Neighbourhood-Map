@@ -85,7 +85,6 @@ function app(){
           currentItem.venue.rating,
           currentItem.venue.photos.groups[0].items[0].suffix,
           category);
-          console.log(currentLoc);
           //add a marker and eventListener to the current Location object
           self.createMarker(currentLoc);
           //add the created object the the list
