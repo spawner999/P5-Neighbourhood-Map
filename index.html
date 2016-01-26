@@ -13,9 +13,10 @@
 
 <body>
   <div class="container">
-    <img src="img/logo.png">
-
-
+    <picture>
+      <source media="(min-width: 767px)" srcset="img/logo-medium.png" />
+      <img  class="img-responsive" src="img/logo-small.png" alt="Logo">
+    </picture>
 
     <div class="col-sm-9">
       <div class="btn-group" data-toggle="buttons" data-bind="radio: category">
