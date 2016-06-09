@@ -3,7 +3,7 @@
 ###Getting started:
 
 To run the project download the .zip folder and open index.html.
-Alternatively go to: http://spawner999.github.io/
+Alternatively go to: http://spawner999.github.io/P5-Neighbourhood-Map/
 
 ###Usage
 
